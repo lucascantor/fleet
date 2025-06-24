@@ -1,6 +1,6 @@
 services:
   - name: fleet
-    plan: free
+    plan: starter
     type: web
     runtime: image
     image:
@@ -47,7 +47,7 @@ services:
         value: 8080
 
   - name: fleet-mysql
-    plan: free
+    plan: starter
     type: pserv
     runtime: docker
     repo: https://github.com/render-examples/mysql
@@ -66,7 +66,7 @@ services:
         value: fleet
 
   - name: fleet-redis
-    plan: free # May use free plan for testing or short-lived deployments
+    plan: starter # May use free plan for testing or short-lived deployments
     type: redis
     maxmemoryPolicy: allkeys-lru
     ipAllowList: []
